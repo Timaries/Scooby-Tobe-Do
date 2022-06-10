@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Item } from '../item.model';
+import { itemsService } from '../items.service';
 
 @Component({
   selector: 'app-item',
@@ -8,4 +9,12 @@ import { Item } from '../item.model';
 })
 export class ItemComponent {
   @Input() tasks: Item;
+  @Input() itemIndex: number;
+
+
+  constructor( private itemsService: itemsService ) {}
+
+  onDeleteTask() {
+    this.itemsService.deleteTask(this.itemIndex)
+  }
 }

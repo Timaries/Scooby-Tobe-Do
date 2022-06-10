@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timer } from 'rxjs';
 import { Item } from './item.model';
 import { itemsService } from './items.service';
 
@@ -12,6 +13,11 @@ export class AppComponent implements OnInit {
   constructor(private itsemsService: itemsService){};
     
   ngOnInit(): void {
-    this.items = this.itsemsService.items
+    this.items = this.itsemsService.getItems();
+    timer(0, 1000).subscribe(()=> {
+      this.dateTime = new Date
+    })
   }
+
+  dateTime: Date;
 }

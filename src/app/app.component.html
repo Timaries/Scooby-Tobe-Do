@@ -1,10 +1,10 @@
-<div class="main_conteiner">
+<div class="main_conteiner robotolight">
   <app-input></app-input>
-  <app-item *ngFor="let task0bject of items" [tasks]="task0bject"></app-item>
+  <app-item *ngFor="let task0bject of items; let i = index" [tasks]="task0bject" [itemIndex]="i"></app-item>
 
 
-  <div class="main_header">
-    <div class="date">10 ივნისი, 2022</div>
-    <div class="time">23:00</div>
+  <div class="conteiner_footer robotolight">
+    <div class="date">{{ dateTime | date }}</div>
+    <div class="time">{{ dateTime | date:'shortTime' }}</div>
 </div>
 </div>

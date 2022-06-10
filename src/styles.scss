@@ -1,6 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: robotolight;
+    src: url(assets/fonts/Roboto-Light.ttf);
+}
+
 body {
     margin: auto;
     padding: 0px;
     background: linear-gradient(90deg, rgba(128,0,139,1) 0%, rgba(82,9,121,1) 35%, rgba(102,0,255,1) 100%);
+}
+
+.robotolight {
+    font-family: robotolight;
 }
