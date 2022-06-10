@@ -1,4 +1,24 @@
-.conteiner {
-    width: 700px;
-    margin: auto;
-}
+.main_conteiner {
+    display: flex;
+    flex-direction: column;
+    margin: 10vh auto;
+    width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .main_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 0px 0px 10px 10px;
+    color: white;
+    background: linear-gradient(
+      90deg,
+      rgba(45, 45, 45, 1) 0%,
+      rgba(46, 46, 46, 1) 30%,
+      rgba(48, 48, 48, 1) 43%,
+      rgba(43, 43, 43, 1) 89%
+    );
+  }
+  

@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Item } from './item.model';
+import { itemsService } from './items.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  items: Item[] = [
-    { description: 'ძაღლის გასეირნება', done: true },
-    { description: 'პროექტზე მუშაობა', done: true },
-    { description: 'კინოში წასვლა', done: true },
-    { description: 'ზუმის შეხვედრა', done: true },
-  ];
+export class AppComponent implements OnInit {
+  items: Item[];
+  constructor(private itsemsService: itemsService){};
+    
+  ngOnInit(): void {
+    this.items = this.itsemsService.items
+  }
 }
